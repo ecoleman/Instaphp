@@ -54,7 +54,7 @@ class Users extends Instagram
 		]);
 		if ($response->code == 200) {
 			$res = new Response($response);
-			$this->SetAccessToken($res->data['access_token']);
+			$this->SetAccessToken($res->access_token);
 			$this->user = $res->data['user'];
 			return true;
 		}
